@@ -1,17 +1,21 @@
 package string;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class str{
-    public static void main(String args[]) throws IOException{
+public class figure{
+    double sss;
+    String f;
+    public double pl(){
+        return 0;
+    }
 
-        vvv.sort("a.txt");
-
-
+    public String f(){
+        return "";
     }
 }
