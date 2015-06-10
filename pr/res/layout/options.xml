@@ -23,5 +23,6 @@
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:text="back"
-            android:id="@+id/button4" android:layout_gravity="center_horizontal" android:layout_weight="0.11"/>
+            android:id="@+id/button4" android:layout_gravity="center_horizontal" android:layout_weight="0.11"
+            android:onClick="Backtomain"/>
 </LinearLayout>
