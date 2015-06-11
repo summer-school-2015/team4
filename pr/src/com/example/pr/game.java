@@ -12,22 +12,30 @@ package com.example.pr;
 
 public class game extends Activity{
 
-        int c1 = 0, n = 0, a1 = 0, c2 = 0, a2 = 0, damage1 = 0, damage2 = 0;
-        public AnimationDrawable mAnimationDrawable;
+        int c1 = 0, n = 0, a1 = 0, c2 = 0, a2 = 0, damage1 = 0, damage2 = 0, hp1 = 90, hp2 = 90;
+        TextView textView7;
+        public AnimationDrawable mAnimationDrawable, mAnimationDrawable1;
         public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.game);
+                animation();
 
         }
         public void fight(View v){
                 Button button5 = (Button) findViewById(R.id.button5);
                 Button button6 = (Button) findViewById(R.id.button6);
                 Button button7 = (Button) findViewById(R.id.button7);
-                TextView textView7 = (TextView) findViewById(R.id.textView7);
+                textView7 = (TextView) findViewById(R.id.textView7);
 
                 // if (v instanceof Button) {
                 switch (n) {
                         case 0:
+                                if (hp1 == 0 || hp2 == 0)
+                                {
+                                        finish();
+                                        Intent intent = new Intent(game.this, MyActivity.class);
+                                        startActivity(intent);
+                                }
                                 switch (v.getId()) {
                                         case R.id.button5:
                                                 button5 = (Button) v;
@@ -64,6 +72,7 @@ public class game extends Activity{
                                                 break;
 
                                 }
+
                                 button5.setText("head");
                                 button6.setText("body");
                                 button7.setText("legs");
@@ -108,11 +117,12 @@ public class game extends Activity{
 
                                 }
                                 getDamage();
-                                animation();
+
                                 button5.setText("head");
                                 button6.setText("body");
                                 button7.setText("legs");
-                                textView7.setText("Player1, choose destination of your hit");
+                                if (hp1 != 0 && hp2 != 0)
+                                  textView7.setText("Player1, choose destination of your hit");
                                 n = 0;
                                 break;
                 }
@@ -122,6 +132,7 @@ public class game extends Activity{
         public void getDamage(){
                 TextView textView5 = (TextView) findViewById(R.id.textView5);
                 TextView textView6 = (TextView) findViewById(R.id.textView6);
+                textView7 = (TextView) findViewById(R.id.textView7);
                 int q1 = 0, q2 = 10, q3 = 20;
                 switch(c1 * a1) {
                         case 3:
@@ -485,8 +496,8 @@ public class game extends Activity{
                                 }
                                 break;
                 }
-                int hp1 = Integer.parseInt(textView5.getText().toString().substring(2, 4));
-                int hp2 = Integer.parseInt(textView6.getText().toString().substring(2, 4));
+                hp1 = Integer.parseInt(textView5.getText().toString().substring(2, 4));
+                hp2 = Integer.parseInt(textView6.getText().toString().substring(2, 4));
                 hp1 -= damage1;
                 if (hp1 < 0)
                         hp1 = 0;
@@ -500,10 +511,11 @@ public class game extends Activity{
 
                 if (hp1 == 0 || hp2 == 0)
                 {
-                        //animationwin();
-                        Intent intent = new Intent(game.this, MyActivity.class);
-                        startActivity(intent);
-
+                        animationwin();
+                        if (hp1 == 0)
+                                textView7.setText("Pavel won!!");
+                        else
+                                textView7.setText("Kirk won!!");
                 }
         }
         public void Backtomain( View v){
@@ -519,10 +531,12 @@ public class game extends Activity{
                 mAnimationDrawable.start();
                 ImageView imageView2 = (ImageView) findViewById(R.id.imageView3);
                 imageView2.setBackgroundResource(R.drawable.cutanimation1);
-                mAnimationDrawable = (AnimationDrawable) imageView2.getBackground();
-                mAnimationDrawable.start();
+                mAnimationDrawable1 = (AnimationDrawable) imageView2.getBackground();
+                mAnimationDrawable1.start();
         }
         public void animationwin(){
+                mAnimationDrawable.stop();
+                mAnimationDrawable1.stop();
 
         }
 

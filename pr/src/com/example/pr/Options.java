@@ -15,4 +15,10 @@ public class Options extends Activity{
         setContentView(R.layout.options);
     }
 
+    public void Backtomain( View v){
+        finish();
+        Intent intent = new Intent(Options.this, MyActivity.class);
+        startActivity(intent);
+
+    }
 }

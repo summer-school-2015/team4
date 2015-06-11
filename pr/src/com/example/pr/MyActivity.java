@@ -33,7 +33,10 @@ public class MyActivity extends Activity {
 
 
     public void toOption(View v){
-        setContentView(R.layout.options);
+        finish();
+        Intent intent = new Intent(MyActivity.this, Options.class);
+        startActivity(intent);
+
     }
     public void exit(View v){
         finish();

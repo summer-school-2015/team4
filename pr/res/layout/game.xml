@@ -12,30 +12,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="name1"
-                android:id="@+id/textView2" android:layout_weight="0.16"/>
+                android:text="Kirk"
+                android:id="@+id/textView2" android:layout_weight="0.97"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="name2"
+                android:text="Pavel"
                 android:id="@+id/textView4"/>
     </LinearLayout>
     <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="51dp" android:weightSum="1" android:baselineAligned="false" android:id="@+id/kk">
+            android:layout_height="43dp" android:weightSum="1" android:baselineAligned="false" android:id="@+id/kk">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="hp90/90"
-                android:id="@+id/textView5" android:layout_weight="0.15"/>
+                android:id="@+id/textView5" android:layout_weight="0.41"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Player1, choose destination of your hit."
-                android:id="@+id/textView7" android:layout_weight="0.37" android:layout_gravity="center_vertical"/>
+                android:id="@+id/textView7" android:layout_weight="0.51" android:layout_gravity="center_vertical"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,30 +57,30 @@
                 android:id="@+id/imageView4" android:background="@drawable/third"/>
         <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="200dp"
-                android:layout_height="177dp" android:weightSum="1">
+                android:layout_width="182dp"
+                android:layout_height="wrap_content" android:weightSum="1">
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="78dp"
                     android:layout_height="wrap_content"
                     android:text="head"
                     android:id="@+id/button5" android:layout_gravity="center_horizontal"
                     android:onClick="fight"
                     />
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:text="body"
                     android:id="@+id/button6" android:layout_gravity="center_horizontal"
                     android:onClick="fight"/>
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="74dp"
                     android:layout_height="wrap_content"
                     android:text="legs"
                     android:id="@+id/button7" android:layout_gravity="center_horizontal"
                     android:onClick="fight"/>
             <Button
                     android:layout_width="92dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:text="menu"
                     android:id="@+id/button8" android:layout_gravity="center_horizontal"
                     android:onClick="Backtomain"/>

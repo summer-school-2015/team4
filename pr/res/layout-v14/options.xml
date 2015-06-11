@@ -9,12 +9,6 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="options"
             android:id="@+id/textView3" android:layout_gravity="center_horizontal" android:layout_weight="0.08"/>
-    <Switch
-            android:layout_width="394dp"
-            android:layout_height="wrap_content"
-            android:text="sound"
-            android:id="@+id/switch2" android:layout_gravity="center_horizontal" android:layout_weight="0.09"
-            android:checked="false"/>
     <Button
             android:layout_width="115dp"
             android:layout_height="wrap_content"

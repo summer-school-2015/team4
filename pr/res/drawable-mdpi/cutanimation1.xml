@@ -5,4 +5,14 @@
     <item android:drawable="@drawable/first2" android:duration="100"/>
     <item android:drawable="@drawable/second2" android:duration="100"/>
     <item android:drawable="@drawable/third2" android:duration="100"/>
+    <item android:drawable="@drawable/fourth2" android:duration="100"/>
+    <item android:drawable="@drawable/fifth2" android:duration="100"/>
+    <item android:drawable="@drawable/sixth2" android:duration="100"/>
+    <item android:drawable="@drawable/seventh2" android:duration="100"/>
+    <item android:drawable="@drawable/eighth2" android:duration="100"/>
+    <item android:drawable="@drawable/ninth2" android:duration="100"/>
+    <item android:drawable="@drawable/tenth2" android:duration="100"/>
+    <item android:drawable="@drawable/eleventh2" android:duration="100"/>
+    <item android:drawable="@drawable/twelfth2" android:duration="100"/>
+    <item android:drawable="@drawable/thirteenth2" android:duration="100"/>
 </animation-list>
