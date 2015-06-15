@@ -2,17 +2,20 @@
 <animation-list
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot="false">
-    <item android:drawable="@drawable/first2" android:duration="100"/>
-    <item android:drawable="@drawable/second2" android:duration="100"/>
-    <item android:drawable="@drawable/third2" android:duration="100"/>
-    <item android:drawable="@drawable/fourth2" android:duration="100"/>
-    <item android:drawable="@drawable/fifth2" android:duration="100"/>
-    <item android:drawable="@drawable/sixth2" android:duration="100"/>
-    <item android:drawable="@drawable/seventh2" android:duration="100"/>
-    <item android:drawable="@drawable/eighth2" android:duration="100"/>
-    <item android:drawable="@drawable/ninth2" android:duration="100"/>
-    <item android:drawable="@drawable/tenth2" android:duration="100"/>
-    <item android:drawable="@drawable/eleventh2" android:duration="100"/>
-    <item android:drawable="@drawable/twelfth2" android:duration="100"/>
-    <item android:drawable="@drawable/thirteenth2" android:duration="100"/>
+    <item android:drawable="@drawable/b1" android:duration="100"/>
+    <item android:drawable="@drawable/b2" android:duration="100"/>
+    <item android:drawable="@drawable/b3" android:duration="100"/>
+    <item android:drawable="@drawable/b4" android:duration="100"/>
+    <item android:drawable="@drawable/b5" android:duration="100"/>
+    <item android:drawable="@drawable/b6" android:duration="100"/>
+    <item android:drawable="@drawable/b7" android:duration="100"/>
+    <item android:drawable="@drawable/b8" android:duration="100"/>
+    <item android:drawable="@drawable/b9" android:duration="100"/>
+    <item android:drawable="@drawable/b10" android:duration="100"/>
+    <item android:drawable="@drawable/b11" android:duration="100"/>
+    <item android:drawable="@drawable/b12" android:duration="100"/>
+    <item android:drawable="@drawable/b13" android:duration="100"/>
+    <item android:drawable="@drawable/b14" android:duration="100"/>
+    <item android:drawable="@drawable/b15" android:duration="100"/>
+    <item android:drawable="@drawable/b16" android:duration="100"/>
 </animation-list>

@@ -13,12 +13,12 @@ package com.example.pr;
 public class game extends Activity{
 
         int c1 = 0, n = 0, a1 = 0, c2 = 0, a2 = 0, damage1 = 0, damage2 = 0, hp1 = 90, hp2 = 90;
+        int flag = 0;
         TextView textView7;
-        public AnimationDrawable mAnimationDrawable, mAnimationDrawable1;
+        public AnimationDrawable mAnimationDrawable, mAnimationDrawable1, mAnimationDrawable2, mAnimationDrawable4;
         public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.game);
-                animation();
 
         }
         public void fight(View v){
@@ -26,6 +26,7 @@ public class game extends Activity{
                 Button button6 = (Button) findViewById(R.id.button6);
                 Button button7 = (Button) findViewById(R.id.button7);
                 textView7 = (TextView) findViewById(R.id.textView7);
+
 
                 // if (v instanceof Button) {
                 switch (n) {
@@ -72,6 +73,12 @@ public class game extends Activity{
                                                 break;
 
                                 }
+                                if (flag != 0)
+                                {
+                                        mAnimationDrawable1.stop();
+                                        mAnimationDrawable1.invalidateSelf();
+                                }
+                                animation1();
 
                                 button5.setText("head");
                                 button6.setText("body");
@@ -117,12 +124,19 @@ public class game extends Activity{
 
                                 }
                                 getDamage();
+                                if (hp1 != 0 && hp2 != 0){
+                                mAnimationDrawable.stop();
+                                mAnimationDrawable.invalidateSelf();
+                                animation2();
+                                flag = 1;
+
 
                                 button5.setText("head");
                                 button6.setText("body");
                                 button7.setText("legs");
-                                if (hp1 != 0 && hp2 != 0)
+
                                   textView7.setText("Player1, choose destination of your hit");
+                                }
                                 n = 0;
                                 break;
                 }
@@ -511,11 +525,21 @@ public class game extends Activity{
 
                 if (hp1 == 0 || hp2 == 0)
                 {
-                        animationwin();
-                        if (hp1 == 0)
+
+                        if (hp1 == 0) {
                                 textView7.setText("Pavel won!!");
-                        else
+                                mAnimationDrawable.stop();
+                                mAnimationDrawable1.stop();
+                                animationwin2();
+                                animationlose2();
+                        }
+                        else {
                                 textView7.setText("Kirk won!!");
+                                mAnimationDrawable.stop();
+                                mAnimationDrawable1.stop();
+                                animationwin1();
+                                animationlose1();
+                        }
                 }
         }
         public void Backtomain( View v){
@@ -524,19 +548,63 @@ public class game extends Activity{
                 startActivity(intent);
 
         }
-        public void  animation() {
+        public void  animation1() {
                 ImageView imageView = (ImageView) findViewById(R.id.imageView4);
                 imageView.setBackgroundResource(R.drawable.cutanimation);
                 mAnimationDrawable = (AnimationDrawable) imageView.getBackground();
+                mAnimationDrawable.setOneShot(true);
                 mAnimationDrawable.start();
+        }
+
+        public void  animation2() {
                 ImageView imageView2 = (ImageView) findViewById(R.id.imageView3);
                 imageView2.setBackgroundResource(R.drawable.cutanimation1);
                 mAnimationDrawable1 = (AnimationDrawable) imageView2.getBackground();
+                mAnimationDrawable1.setOneShot(true);
                 mAnimationDrawable1.start();
         }
-        public void animationwin(){
+
+        public void animationstop1() {
                 mAnimationDrawable.stop();
+                mAnimationDrawable.invalidateSelf();
+        }
+
+        public void animationstop2() {
                 mAnimationDrawable1.stop();
+                mAnimationDrawable1.invalidateSelf();
+        }
+
+        public void animationlose1(){
+                ImageView imageView2 = (ImageView) findViewById(R.id.imageView3);
+                imageView2.setBackgroundResource(R.drawable.win1);
+                mAnimationDrawable4 = (AnimationDrawable) imageView2.getBackground();
+                mAnimationDrawable4.setOneShot(true);
+                mAnimationDrawable4.start();
+
+        }
+        public void animationlose2(){
+                ImageView imageView2 = (ImageView) findViewById(R.id.imageView4);
+                imageView2.setBackgroundResource(R.drawable.win2);
+                mAnimationDrawable4 = (AnimationDrawable) imageView2.getBackground();
+                mAnimationDrawable4.setOneShot(true);
+                mAnimationDrawable4.start();
+        }
+
+        public void animationwin1(){
+                ImageView imageView2 = (ImageView) findViewById(R.id.imageView4);
+                imageView2.setBackgroundResource(R.drawable.lose1);
+                mAnimationDrawable2 = (AnimationDrawable) imageView2.getBackground();
+                //mAnimationDrawable.setOneShot(true);
+                mAnimationDrawable2.start();
+
+        }
+
+        public void animationwin2(){
+                ImageView imageView2 = (ImageView) findViewById(R.id.imageView3);
+                imageView2.setBackgroundResource(R.drawable.lose1);
+                mAnimationDrawable2 = (AnimationDrawable) imageView2.getBackground();
+                //mAnimationDrawable1.setOneShot(true);
+                mAnimationDrawable2.start();
 
         }
 

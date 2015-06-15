@@ -54,7 +54,7 @@
         <ImageView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:id="@+id/imageView4" android:background="@drawable/third"/>
+                android:id="@+id/imageView4" android:background="@drawable/a1"/>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="182dp"
@@ -88,6 +88,6 @@
         <ImageView
                 android:layout_width="200dp"
                 android:layout_height="197dp"
-                android:id="@+id/imageView3" android:layout_weight="0.83" android:background="@drawable/third2"/>
+                android:id="@+id/imageView3" android:layout_weight="0.83" android:background="@drawable/b1"/>
     </LinearLayout>
 </LinearLayout>
