@@ -526,19 +526,24 @@ public class game extends Activity{
                 if (hp1 == 0 || hp2 == 0)
                 {
 
-                        if (hp1 == 0) {
+                        if (hp1 == 0 && hp2 != 0) {
                                 textView7.setText("Pavel won!!");
                                 mAnimationDrawable.stop();
                                 mAnimationDrawable1.stop();
                                 animationwin2();
                                 animationlose2();
                         }
-                        else {
+                        else if (hp1 != 0){
                                 textView7.setText("Kirk won!!");
                                 mAnimationDrawable.stop();
                                 mAnimationDrawable1.stop();
                                 animationwin1();
                                 animationlose1();
+                        }
+                        else{
+                                textView7.setText("Draw!!");
+                                animationwin2();
+                                animationwin1();
                         }
                 }
         }
